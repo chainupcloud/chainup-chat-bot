@@ -6,7 +6,7 @@ from dspy.retrieve.chromadb_rm import ChromadbRM
 
 print("# set up the DSPy module.")
 retriever_model = ChromadbRM(
-    'city_laws', 'db/',
+    'chainup', 'db/',
     embedding_function=embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2"), k=5
 )
 
