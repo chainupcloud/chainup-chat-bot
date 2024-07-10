@@ -18,7 +18,7 @@ turbo = None
 # Set the turbo variable based on the model name
 if "gpt" in model_name:
     turbo = dspy.OpenAI(model=model_name)
-elif "llama" in model_name :
+elif "llama" in model_name:
     turbo = dspy.OllamaLocal(model=model_name)
 else:
     raise ValueError(f"Unknown model: {model_name}")
