@@ -29,7 +29,7 @@ def preprocess_function(examples):
 
 
 # 加载和准备数据
-file_path = 'training_jsons/ai_customer_service_QA1.jsonl'
+file_path = '../training_jsons/ai_customer_service_QA1.jsonl'
 dataset = load_and_prepare_data(file_path)
 tokenizer = LlamaTokenizer.from_pretrained(model_name)
 tokenized_datasets = dataset.map(preprocess_function, batched=True)

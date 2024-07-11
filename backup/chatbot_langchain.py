@@ -41,7 +41,7 @@ def model_response(message, history):
     prompt = PromptTemplate(template=promptTemplate, input_variables=["context", "question"])
 
     # Initiate the retriever
-    db_loaded = load_data_from_pdf("training_pdfs/ChainUp Introduction.pdf")
+    db_loaded = load_data_from_pdf("../training_pdfs/ChainUp Introduction.pdf")
     retriever = db_loaded.as_retriever(search_type="similarity_score_threshold", search_kwargs={
         "k": 5,
         "score_threshold": 0.2
