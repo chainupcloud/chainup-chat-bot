@@ -3,6 +3,8 @@ from chromadb.utils import embedding_functions
 import gradio as gr
 import dspy
 from dspy.retrieve.chromadb_rm import ChromadbRM
+import dsp
+
 
 print("# set up the DSPy module.")
 retriever_model = ChromadbRM(
@@ -28,7 +30,7 @@ print("# set up RAG module.")
 
 
 class RAG(dspy.Module):
-    def __init__(self, num_passages=3):
+    def __init__(self, num_passages=1):
         super().__init__()
         self.retrieve = dspy.Retrieve(k=num_passages)
         self.generate_answer = dspy.ChainOfThought("context, question -> answer")
@@ -38,14 +40,31 @@ class RAG(dspy.Module):
         prediction = self.generate_answer(context=context, question=question)
         return dspy.Prediction(context=context, answer=prediction.answer)
 
-
-uncompiled_rag = RAG()
-
+# uncompiled_rag = RAG()
 
 # Add a Gradio UI
-def chatbot_interface(user_input, history):
-    response = uncompiled_rag(user_input)
-    return f"{response.answer}\n{[c for c in response.context]}"
+
+# def chatbot_interface(user_input):
+#     retrieval_response = dsp.retrieve(user_input, k=1)
+#     response = ""
+#     for result in retrieval_response:
+#         response += f"{result}\n"
+#     return response
+
+def chatbot_interface(user_input):
+    retrieval_response = dsp.retrieve(user_input, k=1)
+    response = ""
+    for result in retrieval_response:
+        if '?\n' in result:
+            output_parts = result.split('?\n')
+            if len(output_parts) > 1:
+                response += f"{output_parts[1].strip()}\n"
+    return response
+
+
+# def chatbot_interface(user_input, history):
+#     response = uncompiled_rag(user_input)
+#     return f"{response.answer}\n{[c for c in response.context]}"
 
 
 iface = gr.Interface(
@@ -56,4 +75,4 @@ iface = gr.Interface(
     description="Ask me about anything about Web3 and Chainup."
 )
 
-iface.launch(share=True)
+iface.launch(server_name="0.0.0.0", server_port=7860, share=True)

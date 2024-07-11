@@ -1,0 +1,6 @@
+chromadb
+gradio
+dspy
+langchain-community
+sentence_transformers
+pypdf

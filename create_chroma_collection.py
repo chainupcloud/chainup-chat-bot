@@ -1,6 +1,7 @@
 import chromadb
 from chromadb.utils import embedding_functions
 from langchain_community.document_loaders import PyPDFLoader
+from load_data import load_json_data
 
 print(" instantiate the Chroma DB vector store.")
 sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
@@ -10,19 +11,19 @@ collection = chroma_client.get_or_create_collection(name="chainup", embedding_fu
 print(" # load the document, split it into pages, and then prepare it for insertion in the vector store.")
 pdf_loader = PyPDFLoader('./training_pdfs/ChainUp Introduction.pdf')
 documents = pdf_loader.load_and_split()
-print(len(documents))
 
-print(" # This uses the LangChain utility function to load and split the document. ")
-docs = []
-ids = []
-i = 0
-for doc in documents:
-  docs.append(doc.page_content)
-  ids.append(str(i))
-  i = i+1
-
-print("# call the ChromaDB function to add documents to the vector store and generate embeddings on the fly ")
+# print("# call the ChromaDB function to add documents to the vector store and generate embeddings on the fly ")
 collection.add(
-    documents = docs,
-    ids = ids
+    documents=[doc.page_content for doc in documents],
+    ids=[str(i) for i in range(len(documents))]
 )
+
+# Load the JSON data
+json_dir = './training_jsons'
+print(f"Loading JSON data from directory: {json_dir}")
+docs, ids = load_json_data(json_dir)
+
+# Print information about loaded data (optional)
+print(f"Number of json data loaded: {len(docs)}")
+# Add the JSON data to the collection
+collection.add(documents=docs, ids=ids)
