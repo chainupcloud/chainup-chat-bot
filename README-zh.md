@@ -45,7 +45,7 @@ ollama run llama3
 1. json（training_jsons）
 2. pdf（training_pdfs）
 3. xlsx（training_xlsx）
-4. tweets
+4. tweets @see [https://github.com/chainupcloud/twitter-scan](https://github.com/chainupcloud/twitter-scan)
 
 ## 数据加载到向量数据库 ChromaDB
 ```python

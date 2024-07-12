@@ -45,7 +45,7 @@ Supported data types：
 1. json（training_jsons）
 2. pdf（training_pdfs）
 3. xlsx（training_xlsx）
-4. tweets
+4. tweets @see [https://github.com/chainupcloud/twitter-scan](https://github.com/chainupcloud/twitter-scan)
 
 ## The data is loaded into the vector database ChromaDB
 ```python
