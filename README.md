@@ -1,6 +1,8 @@
 # chainup-chat-bot
 Privatized chatbots based on RAG and Llama3.
 
+[简体中文](README-zh.md) | [English](README.md)
+
 # Technical architecture
 ## Architecture diagram
 ![chatbot](diagrams/chatbot.png)

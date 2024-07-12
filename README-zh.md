@@ -1,6 +1,8 @@
 # chainup-chat-bot
 基于 RAG 和 Llama3 的私有化聊天机器人。
 
+[简体中文](README-zh.md) | [English](README.md)
+
 # 技术架构
 ## 架构图
 ![chatbot](diagrams/chatbot.png)
