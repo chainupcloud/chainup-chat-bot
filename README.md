@@ -9,8 +9,8 @@ Privatized chatbots based on RAG and Llama3.
 
 ## Key technologies
 1. RAG (Retrieval Enhanced Generation) refers to the optimization of large language model output so that it can reference an authoritative knowledge base outside of the training data source before generating a response. Large language models (LLMs) are trained on massive amounts of data, using billions of parameters to generate raw output for tasks such as answering questions, translating language, and completing sentences. Building on the already powerful capabilities of LLMs, RAG extends them to provide access to domain-specific or organization-specific internal knowledge bases, all without the need to retrain models. It's a cost-effective way to improve LLM output to keep it relevant, accurate, and useful in a variety of contexts.
-    2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
-    3. [What is RAG (Retrieval Augmented Generation)?](https://aws.amazon.com/cn/what-is/retrieval-augmented-generation/)
+    1. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+    2. [What is RAG (Retrieval Augmented Generation)?](https://aws.amazon.com/cn/what-is/retrieval-augmented-generation/)
 2. [Ollama](https://github.com/ollama/ollama) Get a framework to get large models up and running quickly。
 3. [Llama3 8B](https://llama.meta.com/llama3/) Meta's open-source model.
 4. [LangChain](https://www.langchain.com/) Help developers easily build applications based on large language models (LLMs).。

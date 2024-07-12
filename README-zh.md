@@ -9,8 +9,8 @@
 
 ## 关键技术
 1. RAG（检索增强生成）是指对大型语言模型输出进行优化，使其能够在生成响应之前引用训练数据来源之外的权威知识库。大型语言模型（LLM）用海量数据进行训练，使用数十亿个参数为回答问题、翻译语言和完成句子等任务生成原始输出。在 LLM 本就强大的功能基础上，RAG 将其扩展为能访问特定领域或组织的内部知识库，所有这些都无需重新训练模型。这是一种经济高效地改进 LLM 输出的方法，让它在各种情境下都能保持相关性、准确性和实用性。 
-   2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
-   3. [什么是 RAG（检索增强生成）？](https://aws.amazon.com/cn/what-is/retrieval-augmented-generation/)
+   1. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+   2. [什么是 RAG（检索增强生成）？](https://aws.amazon.com/cn/what-is/retrieval-augmented-generation/)
 2. [Ollama](https://github.com/ollama/ollama) 快速启动和运行大模型的框架。
 3. [Llama3 8B](https://llama.meta.com/llama3/) Meta 开源的大模型.
 4. [LangChain](https://www.langchain.com/) 帮助开发者轻松地构建基于大语言模型（LLM）的应用程序。
