@@ -1,0 +1,138 @@
+[
+  {
+    "input": "请简单介绍一下chainup",
+    "output": "我们为企业提供一个集区块链解决方案、基础设施开发、关键资源提供、技术知识及能力于一体的一站式平台。"
+  },
+  {
+    "input": "chainup大概有哪些业务线呢？",
+    "output": "我们的业务线包括：交易线、KYT、Web3矿池、钱包、流动性。"
+  },
+  {
+    "input": "chainup有哪些产品呢？",
+    "output": "Chainup产品包括：数字资产交易所CEX\n资产通证化\n全托管\n质押\n去中心化交易所DEX\n游戏和元宇宙\nMPC自托管\n区块链API\n流动性\n智能Web3银行\n分布式存储\n资产管理\n钱包\n取引追迹(KYT)\nChainUp Investment"
+  },
+  {
+    "input": "chainup的产品中，中心化交易所是什么？",
+    "output": "中心化产品是交易的动力源泉，是快速部署ChainUp的白色标签、自有标签和SaaS加密货币交易平台。"
+  },
+  {
+    "input": "chainup的产品中，去中心化交易所是什么？",
+    "output": "去中心化产品建立在区块链技术之上，通过智能合约实现交易的撮合和资产的转移。Chainup通过丰厚的流动性池，更高的佣金，快速部署等特点给客户带来极致体验的去中心化平台。"
+  },
+  {
+    "input": "chainup产品中，流动性是什么？",
+    "output": "ChainUp 作为一站式流动性提供商，已为全球超过300个交易所提供稳定的流动性解决方案。ChainUp不仅提供解决方案,还为交易所对接稳定的全球市场生态,务求以一致及全面的方法,应对全球流动性趋势。"
+  },
+  {
+    "input": "chainup产品中，钱包产品是什么？",
+    "output": "我们为机构投资者提供安全且可客制化的托管服务,帮助客户有效避免数字资产管理的风险和复杂性。"
+  },
+  {
+    "input": "KYT是什么？",
+    "output": "Trustformer 区块键风控与合规专家，Trustformer提供全球领先的KYT风控系统,包含简洁明了的KYTTrust Deck、全面易用的KYTAPIs和多场景定\n制化的KYT Solution。"
+  },
+  {
+    "input": "资产通证化是什么？",
+    "output": "资产通证化是将现实世界的无数资金导入区块链网络，籍良机吸引环球投资者,同时结合ChainUp证券型代币发行(STC)平台降低融资成本与时间"
+  },
+  {
+    "input": "游戏和元宇宙是什么？",
+    "output": "通过NFT、Metaverse和Web3彻底改变游戏，ChainUp的NFT SaaS解决方案:开启数位资产游戏的新时代,用我们的NFT专业知识将游戏体验推向\nWeb3的未来。"
+  },
+  {
+    "input": "智能web3银行是什么？",
+    "output": "Chainup利用Web3的力量，重新构想银行业成为主流金融机构的先驱之一,创造世界一流的客户体验,同时降低运营成本和风险。"
+  },
+  {
+    "input": "全托管是什么？",
+    "output": "全托管指的是共同保管:以高效、可靠的监管解决方案提高生产力。"
+  },
+  {
+    "input": "MPC自托管是什么？",
+    "output": "自托管(MPC钱包〕：企业级的MPC钱包目前最安全的钱包之一,容许用户自我管理他们的私密金钥"
+  },
+  {
+    "input": "chainup投资是什么？",
+    "output": "在ChainUp Investment,我们致力于通过创新的区块链技术,为您的投资之旅提供全方位的支持。以数据驱动投资策略,优化您的投资组合。"
+  },
+  {
+    "input": "质押是什么？",
+    "output": "我们是Web3的AWS。我们为开发者提供了一系列Web3服务，比如API服务Defi产品面向用户，节点服务面向大家。"
+  },
+  {
+    "input": "区块链api是什么？",
+    "output": "ChainUp Cloud支持每个网络的通用api，我们的客户可以专注于构建受益于节点级别可用的相同端点和方法。"
+  },
+  {
+    "input": "分布式储存是什么？",
+    "output": "在时下Web3的时代,ChainUp透过其附属公司Origin Storage,提供了分布式存储基础设施平台,充分利用其领先的行业经验,为客户提供安全、易用及高效的解决方案,籍以赋能区块链生态系统。"
+  },
+  {
+    "input": "Tell me a little about chainup",
+    "output": "We provide a complete suite of blockchain solutions for businesses all within one platform. This includes infrastructure development and provision of essential resources, technical knowledge, and capabilities."
+  },
+  {
+    "input": "What are chainup's business lines?",
+    "output": "Our business lines include: Trading Line, KYT, Web3 mining Pool, Wallet, liquidity."
+  },
+  {
+    "input": "What are chainup's products?",
+    "output": "Chainup products include:  CEX\nAsset tokenization\nFull custody\nstaking\nDEX\nGaming and mateverses\nMPC self-custody\nBlockchain API\nliquidity\nSmart Web3 banking\nDistributed storage\nAsset management\nwallet\nAccess trace (KYT)\nChainUp Investment\""
+  },
+  {
+    "input": "What is a centralized exchange in chainup?",
+    "output": "The Powerhouse of Exchange, Deploy ChainUp’s white label, private-label and SaaS cryptocurrency exchange platform rapidly."
+  },
+  {
+    "input": "What is a decentralized exchange in chainup?",
+    "output": "Decentralized products are built on blockchain technology to match transactions and transfer assets through smart contracts. Chainup is a decentralized platform that brings customers the ultimate experience through a rich liquidity pool, higher commissions, rapid deployment and other features."
+  },
+  {
+    "input": "What is the liquidity-as-a-service in chainup products?",
+    "output": "ChainUp, as a one-stop liquidity provider, has provided stable liquidity solutions to more than 300 exchanges worldwide. ChainUp not only provides solutions, but also connects exchanges to a stable global market ecology, in order to respond to global liquidity trends with a consistent and comprehensive approach."
+  },
+  {
+    "input": "What is the wallet-as-a-service product in chainup?",
+    "output": "We provide secure and customizable custody services for institutional investors, helping clients avoid the risk and complexity of digital asset management."
+  },
+  {
+    "input": "What is KYT?",
+    "output": "Trustformer provides the world's leading KYT risk control system with a simple and clear KYT Trust Deck, comprehensive and easy-to-use KYT APIs, customized KYT Solutions for multiple scenarios."
+  },
+  {
+    "input": "What is asset tokenization?",
+    "output": "Attract global investors with new investment opportunities while reducing the cost and time for capital raising with ChainUp’s Security Token Offerings (STO) Platform\n"
+  },
+  {
+    "input": "What are gaming and mateverses?",
+    "output": "ChainUp's NFT SaaS Solutions – a new era in digital asset gaming, where our expertise in NFTs propels gaming experiences into the future of Web3\n"
+  },
+  {
+    "input": "What is Smart web3 Banking?",
+    "output": "Chainup leverages the power of Web3 to reimagine banking as one of the pioneers of mainstream financial institutions, creating a world-class customer experience while reducing operational costs and risk."
+  },
+  {
+    "input": "What is full custody?",
+    "output": "ChainUp Custody: Full Custody supports wallet security protection and flexible transaction policies to fulfill clients' digital asset business requirements. ChainUp Custody will help you store and manage your private key with the most advanced security standards and regulations."
+  },
+  {
+    "input": "What is MPC self-custody?",
+    "output": "Enterprise-level MPC Wallet: One of the most secure wallets currently available that allows users to self-manage their private keys"
+  },
+  {
+    "input": "What is chainup Investment?",
+    "output": "At ChainUp Investment, we’re dedicated to supporting your investment journey with cutting-edge blockchain technology. Our data-driven strategies are designed to optimize your portfolio and maximize your returns."
+  },
+  {
+    "input": "What is a staking?",
+    "output": "We are the AWS of Web3.We provide a range of Web3 services such as API services for developers,Defi products for users and node services for everyone."
+  },
+  {
+    "input": "What is the Blockchain api?",
+    "output": "ChainUp Cloud supports each network's common APIs so you can focus on building while benefiting from the same endpoints and methods available at the node level.There are no lock-ins, simply benefit from high scalability while we take care of maintaining the level of service necessary for your product to thrive."
+  },
+  {
+    "input": "What is distributed storage?",
+    "output": "In this Web3 era, ChainUp, through its subsidiary Origin Storage, provides a distributed storage infrastructure platform leveraging its leading industry experience to offer clients secure, easy-to-use, and efficient solutions to power the blockchain ecosystem."
+  }
+]

@@ -8,7 +8,7 @@ import dsp
 
 print("# set up the DSPy module.")
 retriever_model = ChromadbRM(
-    'chainup', 'db/',
+    'Chainup', 'db/',
     embedding_function=embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2"), k=5
 )
 
@@ -21,50 +21,37 @@ turbo = None
 if "gpt" in model_name:
     turbo = dspy.OpenAI(model=model_name)
 elif "llama" in model_name:
-    turbo = dspy.OllamaLocal(model=model_name)
+    turbo = dspy.OllamaLocal(model=model_name, model_type='text', max_tokens=350,  temperature=0.1, top_p=0.8, frequency_penalty=1.17, top_k=40)
 else:
     raise ValueError(f"Unknown model: {model_name}")
 
 dspy.settings.configure(lm=turbo, rm=retriever_model)
+
 print("# set up RAG module.")
+class GenerateAnswer(dspy.Signature): 
+    """Answer questions with short factoid answers."""
+    context = dspy.InputField(desc="may contain relevant facts or answer keywords")
+    question = dspy.InputField()
+    answer = dspy.OutputField(desc="a natural language response, an answer between 1 and 40 words ")
 
-
-class RAG(dspy.Module):
-    def __init__(self, num_passages=1):
+class RAG(dspy.Module): 
+    def __init__(self, num_passages=6):
         super().__init__()
         self.retrieve = dspy.Retrieve(k=num_passages)
-        self.generate_answer = dspy.ChainOfThought("context, question -> answer")
-
+        self.generate_answer = dspy.ChainOfThought(GenerateAnswer)
+    
     def forward(self, question):
         context = self.retrieve(question).passages
         prediction = self.generate_answer(context=context, question=question)
         return dspy.Prediction(context=context, answer=prediction.answer)
 
-# uncompiled_rag = RAG()
-
 # Add a Gradio UI
 
-# def chatbot_interface(user_input):
-#     retrieval_response = dsp.retrieve(user_input, k=1)
-#     response = ""
-#     for result in retrieval_response:
-#         response += f"{result}\n"
-#     return response
+uncompiled_rag = RAG()
 
-def chatbot_interface(user_input):
-    retrieval_response = dsp.retrieve(user_input, k=1)
-    response = ""
-    for result in retrieval_response:
-        if '?\n' in result:
-            output_parts = result.split('?\n')
-            if len(output_parts) > 1:
-                response += f"{output_parts[1].strip()}\n"
-    return response
-
-
-# def chatbot_interface(user_input, history):
-#     response = uncompiled_rag(user_input)
-#     return f"{response.answer}\n{[c for c in response.context]}"
+def chatbot_interface(user_input, history):
+    response = uncompiled_rag(user_input)
+    return f"{response.answer}"
 
 
 iface = gr.Interface(

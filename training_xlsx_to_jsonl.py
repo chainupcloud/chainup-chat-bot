@@ -17,4 +17,4 @@ def xlsx_to_jsonl(input_file, output_file):
 
 
 # 使用示例
-xlsx_to_jsonl('training_xlsx/ai_customer_service_QA1.xlsx', 'training_jsons/ai_customer_service_QA1.jsonl')
+xlsx_to_jsonl('training_xlsx/chainup_project_info.xlsx', 'training_jsons/chainup_project_info')
