@@ -4,8 +4,9 @@ import gradio as gr
 import dspy
 from dspy.retrieve.chromadb_rm import ChromadbRM
 import dsp
+import time
 
-
+# chatbot.py
 print("# set up the DSPy module.")
 retriever_model = ChromadbRM(
     'Chainup', 'db/',
@@ -14,7 +15,12 @@ retriever_model = ChromadbRM(
 
 # gpt-3.5-turbo
 model_name = "llama3"
+# model_name = "gpt-3.5-turbo"
 print(f"# set up model: {model_name}.")
+
+sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
+chroma_client = chromadb.PersistentClient(path="userqueries/")
+queries_collection = chroma_client.get_or_create_collection(name="UserQueries", embedding_function=sentence_transformer_ef)
 
 turbo = None
 # Set the turbo variable based on the model name
@@ -49,17 +55,20 @@ class RAG(dspy.Module):
 
 uncompiled_rag = RAG()
 
-def chatbot_interface(user_input, history):
+def chatbot_interface(user_input):
+    current_time = str(int(time.time()))
     response = uncompiled_rag(user_input)
+    queries_collection.add(documents=[user_input], ids=[current_time] )
     return f"{response.answer}"
 
+css = ".gradio-container {background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(240,240,240,0.9)), url(https://i.postimg.cc/Dy6CgyF8/Chain-UP.png) repeat-x left center; background-size: auto, cover; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }"
 
 iface = gr.Interface(
     fn=chatbot_interface,
     inputs=[gr.Textbox(label="Ask", lines=3)],
     outputs=[gr.Textbox(label="Answer", lines=3)],
     title="Your Friendly Web3 Chatbot",
-    description="Ask me about anything about Web3 and Chainup."
+    css=css
 )
 
 iface.launch(server_name="0.0.0.0", server_port=7860, share=True)
