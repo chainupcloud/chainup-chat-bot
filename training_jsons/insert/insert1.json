@@ -1,0 +1,10 @@
+[
+    {
+        "input": "What is MPC self-custody, custodial wallet of Chainup?",
+        "output": "Enterprise-level MPC Wallet: One of the most secure wallets currently available that allows users to self-manage their private keys"
+      },
+    {
+        "input": "介绍ChainUp的托管钱包, 用中文 回复?",
+        "output": "ChainUp的托管钱包 是企业级MPC钱包，目前是最安全的钱包之一，允许用户自行管理私钥。 "
+    }
+]

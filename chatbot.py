@@ -56,9 +56,10 @@ class RAG(dspy.Module):
 uncompiled_rag = RAG()
 
 def chatbot_interface(user_input):
-    current_time = str(int(time.time()))
+    current_time_int = int(time.time())
+    current_time_str = str(int(time.time()))
     response = uncompiled_rag(user_input)
-    queries_collection.add(documents=[user_input], ids=[current_time] )
+    queries_collection.add(documents=[user_input], ids=[current_time_str] , metadatas=[{"time": current_time_int } ] )
     return f"{response.answer}"
 
 css = ".gradio-container {background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(240,240,240,0.9)), url(https://i.postimg.cc/Dy6CgyF8/Chain-UP.png) repeat-x left center; background-size: auto, cover; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }"
